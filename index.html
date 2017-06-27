@@ -8,36 +8,32 @@
 
   <body>
 
-    <div>
+    <div id=tituloCapitan>
       <h1>Capitan</h1>
     </div>
 
     <div>
 
-      <div>
-        <ul>
+      <div id="menu">
+        <ul class="col-2">
           <li>Prework</li>
           <li>Quiz</li>
           <li>Presentacion</li>
-          <li>Ejercicio</li>
+          <li class="yellow">Ejercicio</li>
         </ul>
       </div>
 
-      <div>
+      <div class="col-8">
         <h1>Ejercicio</h1>
         <p>Este es el contenedor principal, el objetivo es que todo se vea bien aun cambiando las resoluciones, deberas cambiar los colores y tamaños explotando las variables y funciones de SASS</p>
         <p>Deberas obtener la lista de asistencia usando la API ubicada en <a href="http://laboratoria.cuadra.co:9339/api/v1/students/">http://laboratoria.cuadra.co:9339/api/v1/students/</a> y agregarle estilos con SASS</p>
 
         <h4>Asistencia: </h4>
-        <ol>
-          <li> Andrea   <input type="checkbox"> </li>
-          <li> Maria    <input type="checkbox"> </li>
-          <li> Fernanda <input type="checkbox"> </li>
-        </ol>
+        <ol id="listadoAlumnas"></ol>
       </div>
 
       <div>
-        <div class="aside">
+        <div class="col-12" id="resultadosAlumnas">
           <h2>Deberas</h2>
           <p>Crear una funcion para calcular el width % con base en que col es, ej col-1 = 8.33% , </p>
           <h2>Tambien</h2>
@@ -51,9 +47,14 @@
 
     </div>
 
-    <div>
+  <footer>
+    <div class="col-12" id="piePagina">
       <p>Cambiar el tamano de la ventana y cambiar tamaño de esto.</p>
     </div>
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 
   </body>
 </html>
