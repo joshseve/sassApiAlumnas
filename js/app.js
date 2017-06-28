@@ -1,5 +1,5 @@
 var api = {
-	url: "//laboratoria.cuadra.co/api/v1/students/"
+	url: "http://laboratoria.cuadra.co/api/v1/students/"
 };
 
 var plantillaLista = '<li>' +
