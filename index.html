@@ -8,50 +8,49 @@
 
   <body>
 
-    <div id=tituloCapitan>
-      <h1>Capitan</h1>
-    </div>
+    <header class="container">
+        <div class="row">
+          <h1>Capitan</h1>
+        </div>
+    </header>
 
-    <div>
+      <div class="container">
+        <div class="row">
+          <div class="menu">
+            <ul>
+              <li>Prework</li>
+              <li>Quiz</li>
+              <li>Presentacion</li>
+              <li class="list-dif">Ejercicio</li>
+            </ul>
+          </div>
 
-      <div id="menu">
-        <ul class="col-2">
-          <li>Prework</li>
-          <li>Quiz</li>
-          <li>Presentacion</li>
-          <li class="yellow">Ejercicio</li>
-        </ul>
-      </div>
+          <div class="content">
+            <div class="row">
+              <h2>Ejercicio</h2>
+              <p>Este es el contenedor principal, el objetivo es que todo se vea bien aun cambiando las resoluciones, deberas cambiar los colores y tamaños explotando las variables y funciones de SASS</p>
+              <p>Deberas obtener la lista de asistencia usando la API ubicada en <a href="http://laboratoria.cuadra.co:9339/api/v1/students/" target="_blank">http://laboratoria.cuadra.co:9339/api/v1/students/</a> y agregarle estilos con SASS</p>
+              <h3>Asistencia: </h3>
+              <ol id="lista"></ol>
+            </div>
 
-      <div class="col-8">
-        <h1>Ejercicio</h1>
-        <p>Este es el contenedor principal, el objetivo es que todo se vea bien aun cambiando las resoluciones, deberas cambiar los colores y tamaños explotando las variables y funciones de SASS</p>
-        <p>Deberas obtener la lista de asistencia usando la API ubicada en <a href="http://laboratoria.cuadra.co:9339/api/v1/students/">http://laboratoria.cuadra.co:9339/api/v1/students/</a> y agregarle estilos con SASS</p>
-
-        <h4>Asistencia: </h4>
-        <ol id="listadoAlumnas"></ol>
-      </div>
-
-      <div>
-        <div class="col-12" id="resultadosAlumnas">
-          <h2>Deberas</h2>
-          <p>Crear una funcion para calcular el width % con base en que col es, ej col-1 = 8.33% , </p>
-          <h2>Tambien</h2>
-          <p>Implementar los colores de laboratoria usando la funcion rgb/a</p>
-          <h2>Por ultimo</h2>
-          <p>Implementar anidacion de maximo 4 niveles hacia abajo para facilitar la lectura del archivo</p>
-          <h2>No olvides</h2>
-          <p>Subir todo en version compress (--style)</p>
+          </div>
+          <div class="aside">
+            <h2>Deberás</h2>
+            <p>Crear una funcion para calcular el width % con base en que col es, ej col-1 = 8.33% , </p>
+            <h2>Tambien</h2>
+            <p>Implementar los colores de laboratoria usando la funcion rgb/a</p>
+            <h2>Por ultimo</h2>
+            <p>Implementar anidacion de maximo 4 niveles hacia abajo para facilitar la lectura del archivo</p>
+            <h2>No olvides</h2>
+            <p>Subir todo en version compress (--style)</p>
+          </div>
         </div>
       </div>
-
-    </div>
-
-  <footer>
-    <div class="col-12" id="piePagina">
-      <p>Cambiar el tamano de la ventana y cambiar tamaño de esto.</p>
-    </div>
-  </footer>
+      
+      <footer class="footer container">
+        <p>Cambiar el tamano de la ventana y cambiar tamaño de esto.</p>
+      </footer>
 
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/app.js"></script>

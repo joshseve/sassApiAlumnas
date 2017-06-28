@@ -1,118 +1,105 @@
-$container-width: 100%;
-$labYellow: rgb(234, 157, 21);
-$labGray: rgb(51, 51, 51);
-$labFont: 'Lato', sans-serif;
-$text-white: white;
-$text-black: black;
+@import 'variables';
+@import 'mixin';
 
-/*GLOBAL*/
-* {
-  font-family: $labFont;
+*{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  font-family: $font-contenido;
 }
 
-#tituloCapitan {
+.container {
+  width: 100%;
   margin: 0 auto;
-  background-color: $labYellow;
-	color:$text-white;
-	padding: 2vh;
 }
-
-#menu {
-	color: $text-white;
-  background-color: white;
-
-	ul {
-		list-style-type: none;
-    margin-top: 10px;
-	}
-
-	li {
-		background: $labGray;
-		padding: 10px;
-    margin-top: 10px;
-	}
-
-	.yellow {
-		background: $labYellow;
-	}
-}
-
-#resultadosAlumnas {
-  background-color: $labGray;
-	color:$text-white;
-  text-align: center;
-
-  h2 {
-    font-weight: bold;
-  }
-}
-
-#piePagina {
-  background-color: $labGray;
-	color:$text-white;
-  text-align: center;
-  padding: 10px;
-  margin-top: 10px;
-}
-
-
-/*COLUMNAS*/
 .row::before, .row::after {
   content: " ";
   display: table;
 }
-
 .row::after {
   clear: both;
 }
 
-[class*="col-"] {
-  min-height: 8px;
-  padding: 12px;
-  float: left;
+header{
+  background-color: $background-amarillo;
+  color: $font-blanco;
+  margin: 5%;
+  padding: 2%;
+  h1{
+    font-family: $font-titulo;
+  }
 }
 
-.col-1 {
-  /* (1/12)*100 */
-  width: 8.333%;
+.menu{
+  ul{
+    li{
+      @include list(3%);
+    }
+    .list-dif{
+      @extend .list-dif;
+      background-color: $background-amarillo;
+      font-family: $font-contenido;
+    }
+
+    @media (min-width: $break-small) {
+      @include grid (12);
+    }
+    @media (min-width: $break-medium) {
+      @include grid (4);
+    }
+    @media (min-width: $break-large) {
+      @include grid (4);
+    }
+  }
 }
 
-.col-2 {
-  /* (2/12)*100 */
-  width: 16.666%;
+.content{
+  h2, h3{
+    font-family: $font-titulo;
+  }
+  p{
+    margin: 2% 2% 2% 0;
+  }
+  li{
+    list-style-position: inside;
+  }
+  @media (min-width: $break-small) {
+    @include grid (10);
+  }
+  @media (min-width: $break-medium) {
+    @include grid (8);
+  }
+  @media (min-width: $break-large) {
+    @include grid (4);
+  }
 }
 
-.col-3 {
-  /* (3/12)*100 */
-  width: 25%;
+.aside{
+  background: $background-gris;
+  color: $font-blanco;
+  text-align: $center-align;
+  h2{
+    font-family: $font-titulo;
+    padding: 2%;
+  }
+  p{
+    padding-bottom: 3%;
+  }
+  @media (min-width: $break-small) {
+    @include grid (12);
+  }
+  @media (min-width: $break-medium) {
+    @include grid (12);
+  }
+  @media (min-width: $break-large) {
+    @include grid (4);
+  }
 }
 
-.col-4 {
-  /* (4/12)*100 */
-  width: 33.333%;
-}
-
-.col-5 {
-  /* (5/12)*100 */
-  width: 41.666%;
-}
-
-.col-6 {
-  /* (6/12)*100 */
-  width: 50%;
-}
-
-.col-7 {
-  /* (7/12)*100 */
-  width: 58.333%;
-}
-
-.col-8 {
-  /* (8/12)*100 */
-  width: 66.666%;
-}
-
-.col-12 {
-  /* (12/12)*100 */
-  width: 100%;
+.footer{
+  background: $background-gris;
+  color: $font-blanco;
+  margin-top: 1%;
+  padding: 1%;
+  text-align: $center-align;
 }
